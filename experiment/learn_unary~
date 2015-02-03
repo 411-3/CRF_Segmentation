@@ -1,0 +1,7 @@
+# evaluate with unary terms only
+${BIN_DIR}/inferPixelLabels -config $CONFIG -pairwise 0.0 \
+-outLabels .unary.txt -outImages .unary.png $TEST_LIST
+# score results
+${BIN_DIR}/scorePixelLabels -config $CONFIG \
+-inLabels .unary.txt $TEST_LIST
+
